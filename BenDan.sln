@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenDan.Common", "BenDan.Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenDan.UI", "BenDan.UI\BenDan.UI.csproj", "{0BDB97FC-66C7-43CE-995E-799328FE6B8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenDan.Web", "BenDan.Web\BenDan.Web.csproj", "{D18CD2BC-F043-4B57-9997-7CE2491AD39E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{0BDB97FC-66C7-43CE-995E-799328FE6B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BDB97FC-66C7-43CE-995E-799328FE6B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BDB97FC-66C7-43CE-995E-799328FE6B8F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D18CD2BC-F043-4B57-9997-7CE2491AD39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D18CD2BC-F043-4B57-9997-7CE2491AD39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D18CD2BC-F043-4B57-9997-7CE2491AD39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D18CD2BC-F043-4B57-9997-7CE2491AD39E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

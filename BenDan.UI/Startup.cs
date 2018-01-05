@@ -1,5 +1,6 @@
 ﻿using BenDan.ApplicationCore.Entities;
 using BenDan.Infrastructure;
+using BenDan.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -37,6 +38,9 @@ namespace BenDan.UI
             }).AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddScoped<UserServices, UserServices>();
+            services.AddScoped<UserServices>();
+            services.AddMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -52,7 +56,10 @@ namespace BenDan.UI
             }
             InitializeNetCoreBenDanDatabase(app.ApplicationServices);
 
+            app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
+            app.UseAuthentication();
+            app.UseStatusCodePages();
 
             app.UseMvc(routes =>
             {

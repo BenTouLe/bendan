@@ -30,15 +30,13 @@ namespace BenDan.UI.Controllers
             return View();
         }
 
-        public IActionResult Login()
+        public IActionResult Login(string returnUrl = null)
         {
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
 
-        public IActionResult Register()
-        {
-            return View();
-        }
+      
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -61,6 +59,11 @@ namespace BenDan.UI.Controllers
                 ModelState.AddModelError("", "用户名或密码错误");
                 return View(model);
             }
+        }
+
+        public IActionResult Register()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -89,6 +92,13 @@ namespace BenDan.UI.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> LogOff()
+        {
+            await SignInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
 
         #region 辅助方法
 
@@ -112,7 +122,6 @@ namespace BenDan.UI.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-
         #endregion
 
     }

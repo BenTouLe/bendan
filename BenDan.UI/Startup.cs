@@ -38,8 +38,8 @@ namespace BenDan.UI
             }).AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
             services.AddMvc();
-            services.AddScoped<UserServices, UserServices>();
-            services.AddScoped<UserServices>();
+            //services.AddScoped<UserServices, UserServices>();
+            //services.AddScoped<UserServices>();
             services.AddMemoryCache();
         }
 

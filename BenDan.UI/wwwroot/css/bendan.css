@@ -5,3 +5,15 @@
 .bd-form-control {
     margin-right:10px;
 }
+.bd-container {
+    margin-top:70px;
+}
+.bd-auchor {
+    max-width: 100px;
+    margin-top: -70px;
+    margin-bottom: 5px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}

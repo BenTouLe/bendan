@@ -11,7 +11,7 @@ using System;
 namespace BenDan.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180103143631_InitMigration")]
+    [Migration("20180108010005_InitMigration")]
     partial class InitMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
